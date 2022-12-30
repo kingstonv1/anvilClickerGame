@@ -9,10 +9,13 @@ public class anvilClickHandler : MonoBehaviour {
     public Sprite hitAnim;
     public TextMeshProUGUI pointsLabel1;
     public TextMeshProUGUI pointsLabel2;
+    public TextMeshProUGUI pointsLabel3;
     public AudioSource sound;
+    public AudioSource sound2;
 
     //moved currentPoints to a public variable for use in other places --Caleb
     public int currentPoints = 0;
+    public int gold = 0;
 
     // setHit and setIdle both just change the sprite of the anvil object.
     private void setHit() {
@@ -23,21 +26,29 @@ public class anvilClickHandler : MonoBehaviour {
     }
 
     private void incrementPoints() {
+        //resets the counter when a sword is forged
+        if (int.Parse(pointsLabel1.text) >= 10)
+        {
+            currentPoints = currentPoints - 10;
+
+            gold += 50;
+            pointsLabel3.text = ((gold).ToString() + " Gold");
+            playCoinSound();
+        }
+
         currentPoints = (currentPoints + 1);
         pointsLabel1.text = (currentPoints).ToString();
         pointsLabel2.text = ((currentPoints).ToString() + "/10");
-
-        //resets the counter when a sword is forged
-        if(int.Parse(pointsLabel1.text) >= 10)
-        {
-            currentPoints = currentPoints - 10;
-        }
     }
 
     private void playHitSound() {
         sound.Play();
     }
 
+    private void playCoinSound()
+    {
+        sound2.Play();
+    }
 
 
     // Start is called before the first frame update
