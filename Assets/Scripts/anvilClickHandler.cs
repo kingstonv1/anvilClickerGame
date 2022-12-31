@@ -32,7 +32,7 @@ public class anvilClickHandler : MonoBehaviour {
         if (currentPoints == 10)
         {
             currentPoints = currentPoints - 10;
-            
+
             gold += 50;
             goldLabel.text = ((gold).ToString() + " Gold");
             playCoinSound();
@@ -63,6 +63,7 @@ public class anvilClickHandler : MonoBehaviour {
     }
 
     void OnMouseDown() {
+        Debug.Log("Something");
         incrementPoints();
         setHit();
         playHitSound();
