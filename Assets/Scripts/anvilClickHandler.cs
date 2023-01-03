@@ -7,9 +7,7 @@ public class anvilClickHandler : MonoBehaviour {
     public SpriteRenderer spriteRenderer;
     public Sprite idleAnim;  
     public Sprite hitAnim;
-    public TextMeshProUGUI pointsLabel;
     public TextMeshProUGUI swordProgressLabel;
-    public TextMeshProUGUI goldLabel;
     public AudioSource sound;
     public AudioSource sound2;
     public Bank bank;
@@ -20,10 +18,12 @@ public class anvilClickHandler : MonoBehaviour {
     public int totalClicks;
 
     //setHit and setIdle both just change the sprite of the anvil object.
-    private void setHit() {
+    private void setHit() 
+    {
         spriteRenderer.sprite = hitAnim;
     }
-    private void setIdle() {
+    private void setIdle() 
+    {
         spriteRenderer.sprite = idleAnim;
     }
 
@@ -34,16 +34,11 @@ public class anvilClickHandler : MonoBehaviour {
         if (currentPoints == 10)
         {
             currentPoints = currentPoints - 10;
-
             //Add the value of the sword you just forged to your total gold
             bank.gold += bank.swordValue;
-
-            //Update the counter
-            goldLabel.text = ((bank.gold).ToString() + " Gold");
             playCoinSound();
         }
 
-        pointsLabel.text = (currentPoints).ToString();
         swordProgressLabel.text = ((currentPoints).ToString() + "/10");
     }
 
