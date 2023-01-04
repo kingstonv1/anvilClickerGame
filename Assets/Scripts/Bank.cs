@@ -1,6 +1,6 @@
 using UnityEngine;
 
-//This script is a class that holds all of the global variables needed for the game.
+//This script is a class that holds all of the global variables needed for the game
 
 
 public class Bank : MonoBehaviour
@@ -18,6 +18,6 @@ public class Bank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
