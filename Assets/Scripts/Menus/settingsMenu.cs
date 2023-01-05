@@ -3,6 +3,7 @@ using UnityEngine;
 public class settingsMenu : MonoBehaviour
 {
     public GameObject menu;
+    public MenuVisibilityHandler menus;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,10 @@ public class settingsMenu : MonoBehaviour
 
     void OnMouseDown() 
     {
-        menu.SetActive(true);
+        //checks to see if any other menus are open before opening the abilities menu
+        if (!menus.menus[0].active && !menus.menus[1].active && !menus.menus[2].active)
+        {
+            menu.SetActive(true);
+        }
     }
 }

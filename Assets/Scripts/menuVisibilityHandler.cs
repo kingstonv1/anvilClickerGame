@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class menuVisibilityHandler : MonoBehaviour
+public class MenuVisibilityHandler : MonoBehaviour
 {
     //The objects in this array are as follows:
     //shopMenu, abilitiesMenu, statsMenu, settingsMenu

@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class shopMenu : MonoBehaviour
 {
     public GameObject menu;
+    public MenuVisibilityHandler menus;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,10 @@ public class shopMenu : MonoBehaviour
 
     void OnMouseDown() 
     {
-        menu.SetActive(true);
+        //checks to see if any other menus are open before opening the shop menu
+        if (!menus.menus[1].active && !menus.menus[2].active && !menus.menus[3].active)
+        {
+            menu.SetActive(true);
+        }
     }
 }

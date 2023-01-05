@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6230331}
   - component: {fileID: 6230330}
   - component: {fileID: 6230332}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Gold
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6230328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1271}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3249853804894101396, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3249853804894101399, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -379,6 +383,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3249853804894101400, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -780131725
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955097616365929842, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -595,6 +607,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3249853804894101400, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -780131725
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -884,6 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 1841153978}
+  menus: {fileID: 519420033}
 --- !u!1 &427108049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 1134727115}
+  menus: {fileID: 519420033}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 614510193}
+  menus: {fileID: 519420033}
 --- !u!1 &1077258840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1714,7 @@ Canvas:
   m_GameObject: {fileID: 1077258840}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 0
   m_PixelPerfect: 1
@@ -1873,7 +1892,7 @@ GameObject:
   - component: {fileID: 1250092727}
   - component: {fileID: 1250092726}
   - component: {fileID: 1250092728}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SwordValue+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2205,6 +2224,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3249853804894101400, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -780131725
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2366,6 +2389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 1634757493}
+  menus: {fileID: 519420033}
 --- !u!1 &1634757493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3249853804894101396, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
@@ -2455,7 +2479,7 @@ GameObject:
   - component: {fileID: 1988975097}
   - component: {fileID: 1988975099}
   - component: {fileID: 1988975098}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Sword Progress
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2516,7 +2540,7 @@ MonoBehaviour:
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0, g: 0, b: 0, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
@@ -2620,8 +2644,16 @@ PrefabInstance:
       value: ShopMenu
       objectReference: {fileID: 0}
     - target: {fileID: 3249853804894101396, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249853804894101396, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249853804894101396, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3249853804894101398, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
       propertyPath: m_Enabled
@@ -2725,7 +2757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3249853804894101400, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1515025465
+      value: -780131725
       objectReference: {fileID: 0}
     - target: {fileID: 3249853804894101401, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
       propertyPath: m_Enabled
@@ -2734,6 +2766,26 @@ PrefabInstance:
     - target: {fileID: 5649967293027077179, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649967293027077179, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649967293027077179, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -780131725
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955097616365929842, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955097616365929842, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532396311599610180, guid: 63e21678703ec5349be9fe6df22689f0, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
