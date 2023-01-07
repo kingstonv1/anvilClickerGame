@@ -38,7 +38,8 @@ public class SwordValueUpgrade : MonoBehaviour
     void OnMouseDown() 
     {
         setClicked();
-        
+        price.Buy();
+
         if (bank.gold >= price.price) 
         {
             bank.gold -= price.price;

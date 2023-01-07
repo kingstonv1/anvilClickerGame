@@ -24,16 +24,11 @@ public class PriceScaling : MonoBehaviour
         priceTag.text = (price.ToString() + " Gold");
     }
 
-    private void Buy()
+    public void Buy()
     {
         if (bank.gold > price)
         {
             price = price * scaleFactor;
         }
-    }
-
-    void OnMouseDown()
-    {
-        Buy();
     }
 }
