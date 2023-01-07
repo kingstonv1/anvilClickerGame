@@ -6,12 +6,12 @@ public class SwordValueUpgrade : MonoBehaviour
     public Sprite idle;
     public SpriteRenderer spriteRenderer;
     public Bank bank;
+    public PriceScaling price;
     
     private int swordValue;
 
     // The amount that the sword value will be increased by when the upgrade is purchased.
     private int upgradeValue = 10;
-    private int upgradeCost = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +39,9 @@ public class SwordValueUpgrade : MonoBehaviour
     {
         setClicked();
         
-        if (bank.gold >= upgradeCost) 
+        if (bank.gold >= price.price) 
         {
-            bank.gold -= upgradeCost;
+            bank.gold -= price.price;
             bank.swordValue += upgradeValue;
         }
 

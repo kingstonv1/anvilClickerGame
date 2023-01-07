@@ -15,6 +15,6 @@ public class GoldCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        goldLabel.text = (bank.gold.ToString() + " " + "Gold");
+        goldLabel.text = (bank.gold.ToString() + " Gold");
     }
 }
