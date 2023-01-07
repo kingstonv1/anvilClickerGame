@@ -8,7 +8,7 @@ public class SwordValueUpgrade : MonoBehaviour
     public Bank bank;
     public PriceScaling price;
     
-    private int swordValue;
+    private double swordValue;
 
     // The amount that the sword value will be increased by when the upgrade is purchased.
     private int upgradeValue = 10;
@@ -38,13 +38,12 @@ public class SwordValueUpgrade : MonoBehaviour
     void OnMouseDown() 
     {
         setClicked();
-        price.Buy();
 
         if (bank.gold >= price.price) 
         {
-            bank.gold -= price.price;
             bank.swordValue += upgradeValue;
         }
+        price.Buy();
 
         Invoke("setIdle", 0.15f);
     }

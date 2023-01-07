@@ -14,8 +14,8 @@ public class anvilClickHandler : MonoBehaviour {
 
     //moved currentPoints to a public variable for use in other places --Caleb
     public int currentPoints;
-    public int swordValue;
-    public int totalClicks;
+    public double swordValue;
+    public long totalClicks;
 
     //setHit and setIdle both just change the sprite of the anvil object.
     private void setHit() 

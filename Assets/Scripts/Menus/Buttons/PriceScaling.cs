@@ -26,9 +26,10 @@ public class PriceScaling : MonoBehaviour
 
     public void Buy()
     {
-        if (bank.gold > price)
+        if (bank.gold >= price)
         {
-            price = price * scaleFactor;
+            bank.gold -= price;
+            price *= scaleFactor;
         }
     }
 }
