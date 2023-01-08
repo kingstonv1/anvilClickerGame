@@ -31,15 +31,13 @@ public class anvilClickHandler : MonoBehaviour {
         //resets the counter when a sword is forged
         currentPoints = (currentPoints + 1);
 
-        if (currentPoints == 10)
+        if (currentPoints >= bank.swordPoints)
         {
-            currentPoints = currentPoints - 10;
+            currentPoints -= bank.swordPoints;
             //Add the value of the sword you just forged to your total gold
             bank.gold += bank.swordValue;
             playCoinSound();
         }
-
-        swordProgressLabel.text = ((currentPoints).ToString() + "/10");
     }
 
     private void playHitSound() {
@@ -60,7 +58,7 @@ public class anvilClickHandler : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        swordProgressLabel.text = ((currentPoints).ToString() + "/" + (bank.swordPoints).ToString());
     }
 
     void OnMouseDown() {

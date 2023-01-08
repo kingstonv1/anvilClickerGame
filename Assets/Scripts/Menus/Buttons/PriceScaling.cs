@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 //this script is a class that processes the price scaling for the shops
 
@@ -30,6 +31,7 @@ public class PriceScaling : MonoBehaviour
         {
             bank.gold -= price;
             price *= scaleFactor;
+            price = Math.Round(price);
         }
     }
 }
