@@ -17,8 +17,8 @@ public class GoldPerSecondText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GPSText.text = ((bank.apprentices * bank.apprenticeLevel) +
+        GPSText.text = (((bank.apprentices * bank.apprenticeLevel) +
             (bank.smithies * bank.smithiesLevel) +
-            (bank.mines * bank.minesLevel).ToString() + " Gold/Sec");
+            (bank.mines * bank.minesLevel)).ToString() + " Gold/Sec");
     }
 }
