@@ -40,7 +40,7 @@ public class ApprenticeUpgrade : MonoBehaviour
             bank.apprentices++;
         }
         price.Buy();
-      
+    
 
         Invoke("setIdle", 0.15f);
     }

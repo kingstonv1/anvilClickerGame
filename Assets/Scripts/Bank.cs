@@ -17,7 +17,7 @@ public class Bank : MonoBehaviour
     public double mines = 0;
     public double minesLevel = 50;
 
-    public int timer = 300;
+    public float timer = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,16 +28,14 @@ public class Bank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
-        {
-            timer--;
-        }
-        else if(timer == 0)
+        timer -= Time.deltaTime;
+
+        if(timer <= 0)
         {
             gold += (apprentices * apprenticeLevel);
             gold += (smithies * smithiesLevel);
             gold += (mines * minesLevel);
-            timer += 300;
+            timer += 1.0f;
         }
     }
 }
