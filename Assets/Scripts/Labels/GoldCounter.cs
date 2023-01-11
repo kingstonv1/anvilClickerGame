@@ -15,6 +15,7 @@ public class GoldCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        goldLabel.text = (bank.gold.ToString() + " Gold");
+        // The parameter in ToString formats the number with commas.
+        goldLabel.text = (bank.gold.ToString("#,##0"));
     }
 }
